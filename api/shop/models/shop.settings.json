@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shops",
+  "info": {
+    "name": "shop",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "richtext"
+    },
+    "status": {
+      "type": "boolean"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "veg",
+        "nonveg",
+        "both"
+      ]
+    },
+    "city": {
+      "via": "shops",
+      "model": "city"
+    }
+  }
+}
